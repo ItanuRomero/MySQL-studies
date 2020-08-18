@@ -104,3 +104,38 @@ DESC FORNECEDOR;
 ALTER TABLE FORNECEDOR	/* ALTERANDO DO FORNECEDOR */
 ADD COLUMN VALIDADE DATE,	/* ADICIONA UMA COLUNA */
 DROP COLUMN EMAIL;	/* DELETA A COLUNA */
+
+/* exercicio da aula */
+CREATE TABLE IF NOT EXISTS CLIENTE (
+IDCLIENTE INT AUTO_INCREMENT NOT NULL,
+NOME VARCHAR(50),
+ENDERECO VARCHAR(200),
+SEXO ENUM('FEMININO', 'MASCULINO', 'NAO BINARIO'),
+CIDADE VARCHAR(30),
+CNPJ VARCHAR(11) UNIQUE
+);
+
+/*		MINHAS CONCLUSOES SOBRE AS RELACOES SEGUINTES
+auto increment e null:
+contrarios, ja que se ele for autoincremental, nao sera nulo
+
+auto increment e vazio:
+defeituoso pois um valor nao informado pode dar erro como visto acima
+
+auto increment e preencimento:
+executam a mesma funcao porem um automaticamente e o outro manualmente
+
+default e null:
+se algo tem um valor padrao nao pode ser nulo, a nao ser que o valor padrao seja nulo
+
+default e vazio:
+complementares pois se algo for vazio ele recebe um valor padrao ou default
+
+default e preenchimento diferente do default:
+normal, pois sempre que fazemos um preenchimento que nao o default nenhum erro acontece
+
+unique e valor repetido:
+impossivel, se caso algum campo recebe o valor unique ele nao pode se repetir
+
+** falta de acentos causados por teclado em outro idioma, me desculpe **
+*/
