@@ -9,4 +9,8 @@ DML - Data Manipulation Language
     UPDATE
     DELETE
     TRUNCATE
+    SELECT - nem todos concordam, pois nao manipula os dados
+    
+DQL - Data Query Language
+	SELECT - assim fica mais clara
 */
