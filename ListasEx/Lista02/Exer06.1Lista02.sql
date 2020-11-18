@@ -1,0 +1,3 @@
+SELECT SOBRENOME, CARGO FROM empr 
+    INNER JOIN dept on empr.DEPT = dept.DCODIGO
+	WHERE dept.DNOME LIKE '%PLAN%';
